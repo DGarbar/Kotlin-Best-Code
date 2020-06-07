@@ -29,12 +29,10 @@ println("$language has ${language.length} letters in the name")
 
 ## Objects
 
-You should compare by **==** not `equals()`
+You should compare by `==` not `equals()`
 
 
 ## Functions
-
-Simlpe 
 
 ```kotlin
 fun isPositive(number: Int): Boolean {
@@ -54,8 +52,48 @@ fun sum(a: Int, b: Int) = a + b // Int
 #### You can split array elements in the variables
 
 ```kotlin
+intArrayOf creates IntArray;
+charArrayOf creates CharArray;
+doubleArrayOf creates DoubleArray;
+```
+
+```kotlin
 val (year, month, day) = readLine()!!.split('-')
 println("$month/$day/$year")
+```
+
+## Loops
+
+#### For
+
+```kotlin
+for (element in array) {
+    // body of loop
+}
+```
+
+```kotlin
+for (index in 1..5) {
+    println("$index: ${daysOfWeek[index]}")
+}
+```
+
+```kotlin
+for (index in 1 until daysOfWeek.lastIndex) {
+    println("$index: ${daysOfWeek[index]}")
+}
+```
+
+```kotlin
+for (index in daysOfWeek.lastIndex downTo 0 step 2) {
+    println("$index: ${daysOfWeek[index]}")
+}
+```
+
+```kotlin
+for (index in 1..5) {
+    println("$index: ${daysOfWeek[index]}")
+}
 ```
 
 #### Usefull methods
