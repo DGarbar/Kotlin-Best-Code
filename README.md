@@ -62,6 +62,12 @@ val (year, month, day) = readLine()!!.split('-')
 println("$month/$day/$year")
 ```
 
+#### Init Array 
+
+```kotlin
+val input = Array<String>(3) { scanner.nextLine() }
+```
+
 ## Loops
 
 #### For
@@ -75,6 +81,12 @@ for (element in array) {
 ```kotlin
 for (index in 1..5) {
     println("$index: ${daysOfWeek[index]}")
+}
+```
+
+```kotlin
+for ((index, value) in array.withIndex()) {
+    println("the element at $index is $value")
 }
 ```
 
