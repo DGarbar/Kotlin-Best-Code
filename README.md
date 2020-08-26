@@ -108,6 +108,25 @@ for (index in 1..5) {
 }
 ```
 
+#### Labels 
+
+```kotlin
+loop@ for (i in 1..3) {
+    for (j in 1..3) {
+        for (k in 1..3) {
+            if (k == 2) continue@loop
+            println("i = $i, j = $j, k = $k")
+        }
+    }
+}
+```
+
+The output result:
+
+i = 1, j = 1, k = 1
+i = 2, j = 1, k = 1
+i = 3, j = 1, k = 1
+
 #### Usefull methods
 
 ```kotlin
