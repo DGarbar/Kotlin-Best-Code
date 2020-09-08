@@ -32,6 +32,19 @@ println("$language has ${language.length} letters in the name")
 You should compare by `==` not `equals()`
 
 
+## Nulls
+
+```kotlin
+var name: String? = "Kotlin"
+name?.length ?: -1 // getLengh or -1 if null
+```
+
+There is an easy way to invoke an NPE: the !! operator. 
+```kotlin
+var name: String? = "Kotlin"
+print(name!!.length)  // This operator is used to stop the program when null is met.
+```
+
 ## Functions
 
 ```kotlin
