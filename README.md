@@ -27,6 +27,46 @@ val language = "Kotlin"
 println("$language has ${language.length} letters in the name")
 ```
 
+## Class
+
+Data class
+```kotlin
+data class Complex(var real: Double = 0.0, var image: Double = 0.0)
+```
+
+Primary constructor
+```kotlin
+class Size constructor(width: Int, height: Int) {
+    val width: Int = width
+    val height: Int = height
+    val area: Int = width * height
+}
+```
+
+#### Get/Set
+
+```kotlin
+class Client {
+    var name = "Unknown"
+        get() {
+            return field
+        }
+        set(value) {
+            field = value
+        }
+}
+```
+
+
+#### Extension functions
+
+```kotlin
+fun String.repeated(): String = this + this
+
+"ha".repeated()
+```
+
+
 ## Objects
 
 You should compare by `==` not `equals()`
