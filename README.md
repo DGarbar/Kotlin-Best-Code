@@ -66,6 +66,32 @@ fun String.repeated(): String = this + this
 "ha".repeated()
 ```
 
+#### Singleton (object)
+
+```kotlin
+object PlayingField {}
+```
+
+#### Companion (companion)
+It is like a nested object, but more related to the class. 
+Only one companion object is available for each class.
+
+```kotlin
+class Deck {
+    companion object {  // can have NAMe
+        val size = 10
+        val height = 2
+        fun volume(bottom: Int, height: Int) = bottom * height
+    }
+
+    val square = size * size             //100
+    val volume = volume(square, height)  //200
+}
+
+Deck.Companion.volume(1,1)
+Deck.volume(1,1)
+
+```
 
 ## Objects
 
