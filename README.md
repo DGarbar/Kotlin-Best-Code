@@ -17,6 +17,11 @@
 ```kotlin
 val cars = listOf<String>("BMW", "Honda", "Mercedes")
 cars[0] = "Reno" // Compile time error: No set method providing array access
+
+
+for ((index, value) in l.withIndex()) {
+    println("The element at $index is $value")
+}
 ```
 
 #### Map
