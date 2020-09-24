@@ -5,9 +5,31 @@
 `var` - mutable
 `val` - immutable
 
+## Collections
+
+#### List
+
+```kotlin
 `Array<>` - mutable
 `List<>` - immutable
+```
 
+```kotlin
+val cars = listOf<String>("BMW", "Honda", "Mercedes")
+cars[0] = "Reno" // Compile time error: No set method providing array access
+```
+
+#### Map
+
+```kotlin
+val marathon = mutableMapOf(1 to "John Doe", 2 to "Marty McFly", 3 to "Marie Curie")
+
+marathon.remove(1, "John Doe...") // Only if value is ==
+
+for ((key, value) in marathon) {
+    println(value)
+}
+```
 
 ## Strings
 
