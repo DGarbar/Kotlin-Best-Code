@@ -285,3 +285,42 @@ println(if (a == b) {
         "a is less than b"
     })
 ```
+
+
+#### Destrucuting
+
+```kotlin
+data class User(val name: String, val age: Int, val isAdmin: Boolean)
+
+val anonim = User("Anonim", 999, false)
+```
+
+Without DATA class
+```kotlin
+class User(val name: String, val age: Int, val isAdmin: Boolean){
+    operator fun component1(): String = name
+    operator fun component2(): Int = age
+    operator fun component3(): Boolean = isAdmin
+}
+
+// now we can use default destructuring syntax
+fun checkIsAdmin(suspiciousUser: User) {
+    // desctructuring
+    val (name, age, isAdmin) = suspiciousUser
+
+    if (isAdmin)
+        println("Have a nice day!")
+    else
+        println("Sorry, you should not be here.")
+}
+```
+
+
+```kotlin
+fun processAnalytics(usersData: Array<User>) {
+    for ((_, age, isAdmin) in usersData) {
+        if (!isAdmin)
+            sendAnalyticsToCompany("name", age)
+    }
+}
+```
