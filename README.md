@@ -7,6 +7,8 @@
 
 ## Collections
 
+![Java -> Kotlin usage](https://habr.com/ru/company/raiffeisenbank/blog/526374/)
+
 #### List
 
 ```kotlin
